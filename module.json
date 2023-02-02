@@ -1,0 +1,44 @@
+{
+    "name": "zei-lib",
+    "title": "Zei's Library",
+    "description": "A wonderous treasure trove of poorly written Jabba script.",
+     "authors": [
+        {
+            "name": "Zei",
+            "url": "https://github.com/LunarMountain/zei-lib"
+        }],
+    "version": "1.0.5",
+    "library": "false",
+    "manifestPlusVersion": "1.0.0",
+    "minimumCoreVersion": "10",
+    "compatibleCoreVersion": "10",
+    "dependencies": [
+      {
+        "name": "socketlib",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+      },
+      {
+        "name": "lib-wrapper"
+      }
+    ],
+    "system": ["dnd5e"],
+    "socket": true,
+    "scripts": [
+      "scripts/zeiLib.js",
+      "scripts/hooks.js",
+      "scripts/spells.js",
+      "scripts/battle.js",
+      "scripts/menu.js",
+      "scripts/tome.js",
+      "scripts/exchange.js",
+      "scripts/bank.js",
+      "scripts/scene.js",
+      "scripts/teleport.js"
+    ],
+    "styles": [
+      "styles/style.css"
+    ],
+    "url": "https://github.com/LunarMountain/zei-lib",
+    "manifest": "https://github.com/LunarMountain/zei-lib/releases/download/module.json",
+    "download": "https://github.com/LunarMountain/zei-lib/releases/download/module.zip"
+  }

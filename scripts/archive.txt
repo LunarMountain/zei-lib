@@ -1,0 +1,94 @@
+function castColdBreath(name) {
+    if (!game.user.targets.size)
+    {
+      ui.notifications.warn("No targets to cast spell!");
+     console.warn("No targets!");
+     return;
+    }
+  
+  let tokenD = game.scenes.find(x => x.active).data.tokens.find(t => t.name == name);
+  let f = getFurthestTarget(name, (r) => {
+  let darkness = game.scenes.active.data.darkness;
+  
+  //jb2a.fireball.explosion.orange
+  
+  let fx = new Sequence()
+      .effect()
+  .file("modules/JB2A_DnD5e/Library/Generic/Template/Cone/Breath_Weapon/BreathWeapon_Cold01_Regular_Blue_30ft_Cone_Burst_600x600.webm")
+          .atLocation(tokenD)
+           .reachTowards(r);
+  
+  //let sfx = game.playlists.getName("Spells").data.sounds.find(s => s.name == "Charge");
+  //game.playlists.getName("Spells").playSound(sfx);
+  playSFX("dragon/charge.ogg", 0.5);
+  
+  //darken
+  updateDarkness(1);
+  
+  //play fx
+  setTimeout(() => { 
+  fx.play();
+  }, 3000);
+  
+  //play blast
+  setTimeout(() => {
+    playSFX("dragon/breath2.ogg");
+    FluidCanvas.keyCheck("earthquake");
+    //sfx = game.playlists.getName("Spells").data.sounds.find(s => s.name == "Cold Breath");
+  //game.playlists.getName("Spells").playSound(sfx);
+  
+  //reset darkness
+  setTimeout(() => updateDarkness(darkness), 3000);
+  
+  }, 6500);
+  
+  
+  });
+  
+  //let tokenD = canvas.tokens.get(args[0].tokenId);
+  }
+  
+  async function cinematic1() {
+    let darkness = game.scenes.current.data.darkness;
+    game.scenes.current.update({"darkness": 1}, {animateDarkness: 1});
+  
+    let udata = [];
+    udata.push(
+      {
+        _id: "Zc808riX2r19Cl7i",
+        hidden: true,
+      },
+      {
+      _id: "xFsI91fxOCr65sYb",
+      hidden: false,
+      },
+      );
+  
+      playSFX("Spells/Thunderstorm.ogg", 0.5);
+     await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = true;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = false;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = true;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = false;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = true;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = false;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = false;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = true;
+  
+      await canvas.scene.updateEmbeddedDocuments("AmbientLight", udata); 
+      udata[1].hidden = false;
+  }

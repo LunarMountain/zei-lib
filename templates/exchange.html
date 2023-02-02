@@ -1,0 +1,32 @@
+<form id="exchange-form" autocomplete="off" onsubmit="event.preventDefault();">
+    <h4>Players:</h4>
+    <table class="table table-striped table-users" style="margin-bottom: 1rem;">
+        <thead>
+            <td>
+                #
+            </td>
+            <td>
+                Player
+            </td>
+            <td>
+                Gold
+            </td>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div style="margin-bottom: 1rem;">Selected Player
+        <select id="exchange-player-select"></select>
+    </div>
+
+            <table class="controls">
+                <tr>
+                    <td>
+                        <input id="exchange-set-gold-input" type="number"/>
+                    </td>
+                    <td>
+                        <button id="exchange-set-gold-button">Alter Gold</button>
+                    </td>
+                </tr>
+            </table>
+</form>

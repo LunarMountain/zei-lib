@@ -1,0 +1,118 @@
+select.form-control {
+display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+div.row {
+    margin-bottom: 1rem;
+}
+
+table.table tr {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+table.table thead {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* table.table tbody {
+    display: block;
+    width: 100%;
+    max-height: 17rem;
+    overflow: auto;
+}
+
+
+table.table thead {
+    display: block;
+    width: 100%;
+} 
+*/
+
+.tableContainer {
+    height: 17rem;
+    overflow: scroll;
+}
+
+.table {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+/* 757cd7 */
+/* background-image: linear-gradient(#080886, #040443) !important; color: #fff !important; */
+.dnd5e.sheet.actor.character section.window-content {
+    /* background-image: linear-gradient(#1d1d5c, #303088) !important; color: #fff !important; */
+    /* background-image: url("/uo/images/chocobo.webp") !important; background-repeat: repeat; color: yellow !important; */
+    background-image: linear-gradient(#191919, #343434) !important; color: #fff !important;
+}
+
+.dnd5e.sheet.actor.character.ogl5e-sheet .ability-score-column {
+    background-color: transparent !important;
+}
+
+.dnd5e.sheet.actor.character.ogl5e-sheet .health-armor {
+    background-color: transparent !important;
+}
+
+.dnd5e.sheet.actor.npc section.window-content {
+    /* background-image: linear-gradient(#1d1d5c, #303088) !important; color: #fff !important; */
+     background-image: linear-gradient(#191919, #343434) !important; color: #fff !important;
+}
+
+.monks-enhanced-journal section.window-content {
+    background-image: linear-gradient(#191919, #343434) !important; color: #fff !important;
+}
+
+.monks-enhanced-journal .directory-sidebar {
+    background-image: linear-gradient(#343434, #191919) !important; color: #fff !important;
+}
+
+.monks-enhanced-journal .folder-header {
+    color: grey !important;
+}
+
+.item-piles-even-color {
+    background-color: transparent !important;
+}
+
+a.content-link {
+    background-color: transparent !important;
+}
+
+.tooltip {
+    display: none !important;
+}
+
+.sheet.journal-entry .journal-entry-content {
+    background: none !important;
+}
+
+/* .item-piles-items-list */
+
+/* .item-piles-odd-color {
+    
+    background-color: var(--item-piles-even-color);
+} */

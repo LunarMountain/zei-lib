@@ -1,0 +1,74 @@
+<form id="tome-form" autocomplete="off" onsubmit="event.preventDefault();">
+
+    <div class="row">
+        <label>Level</label>
+            <select name="level" id="tome-level" class="form-control">
+                <option selected value="" {{rnSelect}}>Select Level</option>
+                <option type="number" value="0" {{rnSelect}}>Cantrips</option>
+                <option type="number" value="1" {{rnSelect}}>1st Level</option>
+                <option type="number" value="2" {{rnSelect}}>2nd Level</option>
+                <option type="number" value="3" {{rnSelect}}>3rd Level</option>
+                <option type="number" value="4" {{rnSelect}}>4th Level</option>
+                <option type="number" value="5" {{rnSelect}}>5th Level</option>
+                <option type="number" value="6" {{rnSelect}}>6th Level</option>
+                <option type="number" value="7" {{rnSelect}}>7th Level</option>
+                <option type="number" value="8" {{rnSelect}}>8th Level</option>
+                <option type="number" value="9" {{rnSelect}}>9th Level</option>
+            </select>
+    </div>
+
+    <div class="row">
+        <label>Amount</label>
+        <input id="tome-number" type="number" class="form-control" value="1" placeholder="Enter the amount of spells to return. Leave blank for all spells." />
+    </div>
+
+    <div class="row">
+        <label>Classes</label>
+        <select name="class" id="tome-class" class="form-control">
+            <option selected value="" {{rnSelect}}>Any</option>
+            <option type="number" value="bard" {{rnSelect}}>Bard</option>
+            <option type="number" value="cleric" {{rnSelect}}>Cleric</option>
+            <option type="number" value="druid" {{rnSelect}}>Druid</option>
+            <option type="number" value="paladin" {{rnSelect}}>Paladin</option>
+            <option type="number" value="ranger" {{rnSelect}}>Ranger</option>
+            <option type="number" value="sorcerer" {{rnSelect}}>Sorcerer</option>
+            <option type="number" value="warlock" {{rnSelect}}>Warlock</option>
+            <option type="number" value="wizard" {{rnSelect}}>Wizard</option>
+        </select>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+            <th>
+                #
+            </th>
+            <th>
+                Spell
+            </th>
+            <th>
+                Level
+            </th>
+            <th>
+                Class
+            </th>
+            <th>
+                School
+            </th>
+        </thead>
+    </table>
+    </div>
+    <div class="tableContainer row">
+        <table id="tome-spell-list" class="table">
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div>
+        <button type="submit" id="tome-generate-spell" name="submit" value=""><i class="fas fa-magic"></i>Generate Spell</button>
+    </div>
+
+    <div class="row">
+        <button type="submit" id="tome-generate-chat" name="submit" value=""><i class="fas fa-magic"></i>Generate Spell Chat</button>
+    </div>
+
+</form>

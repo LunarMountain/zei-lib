@@ -1,0 +1,27 @@
+//Y:\Data\modules\enhanced-terrain-layer\img\environment
+
+let xhr = new XMLHttpRequest();
+ 
+xhr.open('POST',
+    'http://192.168.0.168:40638',
+     true);
+ 
+xhr.getResponseHeader('Content-type', 'application/json');
+xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true');
+xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST');
+xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+xhr.onload = function () {
+    if (this.status === 200) {
+        console.log(this.responseText)
+    }
+    else {
+        console.log("Some error occurred")
+    }
+}
+ 
+obj = `{"sender": "zei"}`;
+xhr.send(obj);
+
+canvas.templates.destroy(canvas.templates.placeables.filter(o => o.parent.children[0].controlIcon.iconSrc == 'icons/svg/explosion.svg'))
